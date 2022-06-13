@@ -1,13 +1,11 @@
-import { useState } from "react";
 import Back from "./Back";
-import useFetch from "./useFetch";
 
 const Country = ({ country }) => {
-    const { country:aa, pending } = useFetch("https://restcountries.com/v3.1/all");
+    // const { country:aa, pending } = useFetch("https://restcountries.com/v3.1/all");
     const nativeKey = Object.values(country[0].name.nativeName) ;
     const currencies = Object.values(country[0].currencies) ;
     const language = Object.values(country[0].languages) ;
-    const borders = Object.values(country[0].borders)
+    // const borders = Object.values(country[0].borders)
     // const allNames= Object.values(names.name.common);
     // const [all, setAll] = useState([]);
     // aa.map(a=>{all.push(a.name.common)})

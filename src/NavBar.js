@@ -6,10 +6,8 @@ const NavBar = () => {
     const [region, setRegion] = useState('');
     const [search, setSearch] = useState('');
     const navigate = useNavigate();
-    const handleRegion = (e)=>{
-        this.form.submit();
-        e.preventDefault();
-        navigate('/shaba');
+    if(region !== ''){
+        navigate('/region/' + region);
     }
     const handleSearch = (e)=>{
         e.preventDefault();
@@ -25,7 +23,7 @@ const NavBar = () => {
                     }} className="w-full block outline-none py-4" placeholder="Search for a country" />
                 </form>
             </section>
-            <form action="" onSubmit={handleRegion} className="block md:mt-0">
+            <form action="" className="block md:mt-0">
                 <select name="" onChange={(e)=>{
                     setRegion(e.target.value);
                     
@@ -39,7 +37,6 @@ const NavBar = () => {
                     <option value="Europe">Europe</option>
                     <option value="Oceania">Oceania</option>
                 </select>
-                <p>{ region }</p>
             </form>
         </div>
      );

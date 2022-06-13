@@ -1,4 +1,3 @@
-import Back from "./Back";
 import useFetch from "./useFetch";
 import { useParams } from 'react-router-dom';
 import Country from "./Country";

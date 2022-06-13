@@ -7,7 +7,7 @@ const useFetch = (url) => {
 useEffect(()=>{
     fetch(url)
     .then( res => {
-        if(res.status == 404){
+        if(res.status === 404){
             navigate('/not-found'); 
         }
         console.log(res.status);
